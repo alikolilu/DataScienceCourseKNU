@@ -28,3 +28,44 @@ print(v[v > 0])
 [45] 1.652597307 0.034217023 0.389054305 0.405936880
 [49] 0.250838074
 ```
+2. Створіть фрейм (data frame) y командою y <- data.frame(a = rnorm(100), b = 1:100, cc = sample(letters, 100, replace = TRUE)). Для цього data frame виведіть: останні 10 строк; строки з 10 по 20 включно; 10-й елемент стовпця b; повністю стовпець cc, при цьому використайте ім’я стовпця.
+```r
+y<-data.frame(a=rnorm(100), b=1:100, cc=sample(letters,100,replace=TRUE))
+# Last 10 elements
+tail(y, 10)
+              a   b cc
+91   0.22609175  91  b
+92  -0.09212276  92  q
+93   1.27288388  93  x
+94  -0.23998348  94  a
+95  -0.69576651  95  c
+96   0.91429971  96  y
+97   0.71424314  97  v
+98  -1.39198958  98  c
+99  -0.17718421  99  d
+100  1.17154607 100  s
+# Elements from 10 to 20 inclusive
+y[10:20, ]
+            a  b cc
+10 -0.9252284 10  u
+11  0.4808047 11  z
+12 -0.8894563 12  j
+13  0.1851569 13  j
+14  0.1111943 14  o
+15  0.1775882 15  h
+16 -1.2028975 16  q
+17 -0.2856794 17  j
+18  0.2055895 18  b
+19  0.5833656 19  s
+20  0.4816333 20  b
+# Print 10-th element of column b
+y[["b"]][10]
+[1] 10
+# Print cc column
+y[["cc"]]
+  [1] v b v l c x s u x u z j j o h q j b s b c f e m b n w n
+ [29] k p a c e f x m w l x s p y b s q j m l e e m q f y h s
+ [57] s z o f i l w t h l n v l g f g e h x h q h i g g p b a
+ [85] p j h g i v b q x a c y v c d s
+25 Levels: a b c d e f g h i j k l m n o p q s t u v w ... z
+```
