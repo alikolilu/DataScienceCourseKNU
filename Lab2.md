@@ -69,3 +69,17 @@ y[["cc"]]
  [85] p j h g i v b q x a c y v c d s
 25 Levels: a b c d e f g h i j k l m n o p q s t u v w ... z
 ```
+
+3. Створіть вектор z з елементами 1, 2, 3, NA, 4, NA, 5, NA. Для цього вектору: виведіть всі елементи, які не NA; підрахуйте середнє значення всіх елементів цього вектору без NA значень та з NA значеннями.
+```r
+# Print all non-NA
+z<-c(1,2,3,NA,4,NA,5,NA)
+z[!is.na(z)]
+[1] 1 2 3 4 5
+# Mean without NA
+mean(z, na.rm = TRUE)
+[1] 3
+# Mean with NA
+mean(z)
+[1] NA
+```
