@@ -58,3 +58,42 @@ list(1L, 2, TRUE, 'a', 1+1i)
 [[5]]
 [1] 1+1i
 ```
+
+5. Створити фактор з трьома рівнями «baby», «child», «adult».
+```r
+people<-c('baby', 'baby', 'child', 'adult', 'adult', 'adult')
+factor(people, levels=c('baby','child','adult'))
+[1] baby  baby  child adult adult adult
+Levels: baby child adult
+```
+
+6. Знайти індекс першого значення NA в векторі 1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11. Знайти кількість значень NA.
+```r
+match(NA, c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11))
+[1] 5
+
+sum(is.na(c(1, 2, 3, 4, NA, 6, 7, NA, 9, NA, 11)))
+[1] 3
+```
+7. Створити довільний data frame та вивести в консоль.
+```r
+df<-data.frame(sum = c(1,2,3,4,5),item = c('a','b','c','d','e'))
+df
+  sum item
+1   1    a
+2   2    b
+3   3    c
+4   4    d
+5   5    e
+```
+8. Змінити імена стовпців цього data frame.
+```r
+colnames(df)<-c('total', 'name')
+df
+  total name
+1     1    a
+2     2    b
+3     3    c
+4     4    d
+5     5    e
+```
