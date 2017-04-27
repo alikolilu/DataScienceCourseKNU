@@ -59,10 +59,10 @@ y[10:20, ]
 19  0.5833656 19  s
 20  0.4816333 20  b
 # Print 10-th element of column b
-y[["b"]][10]
+y[["b"]][10] # y$b[10]
 [1] 10
 # Print cc column
-y[["cc"]]
+y[["cc"]] # y$cc 
   [1] v b v l c x s u x u z j j o h q j b s b c f e m b n w n
  [29] k p a c e f x m w l x s p y b s q j m l e e m q f y h s
  [57] s z o f i l w t h l n v l g f g e h x h q h i g g p b a

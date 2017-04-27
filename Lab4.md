@@ -17,7 +17,7 @@ head(data, 6)
 ```
 3. Скільки спостерігань (строк) в дата фреймі?
 ```r
-length(data$Ozone)
+length(data$Wind)
 [1] 153
 ```
 4. Виведіть останні 10 строк дата фрейму.
@@ -76,6 +76,6 @@ max(subset(data, Month == 5)$Ozone)
 [1] NA
 # Without NA
 last_subset_ozone<-subset(data, Month == 5)$Ozone
-max(last_subset_ozone[!is.na(last_subset_ozone)])
+max(last_subset_ozone, na.rm=TRUE)
 [1] 115
 ```

@@ -34,10 +34,6 @@ my_ifelse <- function(x, exp, n) {
         return(x)
     }
 }
-v <- c(10, 11, -2, 5, 15)
-print(my_ifelse(v, ">", 7))
-print(my_ifelse(v, "!", 7))
-
 
 my_ifelse(c(1,2,3),'>',0)
 [1] 1 2 3
